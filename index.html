@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+        <style type="text/css">
+                .jua-regular {
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+        body{background: black;}
+         img {margin: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+}
+.title{color: white; position: absolute; z-index: 3; font-size: 3rem; top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);}
+.movie{color: black; position: absolute; z-index: 3; font-size: 2rem; top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);}
+.button-container {
+            position: absolute;
+            top: calc(50% + 50px); 
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        button {
+            margin: 10px; 
+        }
+        </style>
+}
+</head>
+<body>
+        <div class ="movie"></div>
+        <div class ="title jua-regular">오늘 ❓와 함께 보면 좋을 영화 무드는?</div>
+<img src="tv.png" style="position: absolute; z-index: 1;">
+    <div class="button-container">
+        <button id="playBut">TV on</button>
+        <button id="stopBut">SELECT!</button>
+        
+        <script type="text/javascript">
+console.log("ok");
+  let myTimer;
+        const movieTitles = ["👩🏻‍❤️‍👨🏻", "🧍🏻‍♀️", "🧍🏻", "🍪", "🍿", "🍕"];
+
+        stopBut.onclick = function(){
+            clearInterval(myTimer);
+            updateMovieTitle();
+            document.body.style.background = randomColor();
+        }
+
+        playBut.onclick = function(){
+            myTimer = setInterval(change, 100);
+        }
+
+        function change(){
+            document.body.style.background = randomColor();
+            updateMovieTitle();
+        }
+
+function change(){
+        document.body.style.background = randomColor();
+        console.log(1);
+}
+function randomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function updateMovieTitle() {
+            const randomIndex = Math.floor(Math.random() * movieTitles.length);
+            document.querySelector('.movie').textContent = movieTitles[randomIndex];
+        }
+
+        </script>
+</body>
+</html>
