@@ -24,7 +24,7 @@
 .title{color: white; position: absolute; z-index: 3; font-size: 3rem; top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);text-align: center;}
-.movie{color: black; position: absolute; z-index: 3; font-size: 2rem; top: 35%;
+.movie{color: black; position: absolute; z-index: 3; font-size: 3rem; top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);}
 .button-container {
@@ -44,14 +44,14 @@
         <div class ="movie"></div>
         <div class ="title jua-regular">오늘 ❓와 함께 보면 좋을 영화 무드는?</div>
 <img src="tv.png" style="position: absolute; z-index: 1;">
-    <div class="button-container">
+    <div class="button-container jua-regular ">
         <button id="playBut">TV on</button>
-        <button id="stopBut">SELECT!</button>
+        <button id="stopBut">SELECT!</button></div>
         
         <script type="text/javascript">
 console.log("ok");
   let myTimer;
-        const movieTitles = ["👩🏻‍❤️‍👨🏻", "🧍🏻‍♀️", "🧍🏻", "🍪", "🍿", "🍕"];
+        const movieTitles = ["👩🏻‍❤️‍👨🏻", "👩🏻", "🧑🏻", "🍪", "🍿", "🍕"];
 
         stopBut.onclick = function(){
             clearInterval(myTimer);
